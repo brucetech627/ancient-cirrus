@@ -5,7 +5,7 @@
 mkdir ok
 cd ok
 git config --global credential.helper cache
-repo init -u https://github.com/Ancient-Roms/manifest -b eleven
+repo init -u https://github.com/NezukoOS/manifest -b eleven
 repo sync -j32
 git clone https://github.com/Maitreya29/android_device_oneplus_cheeseburger.git device/oneplus/cheeseburger
 git clone https://github.com/Maitreya29/android_device_oneplus_msm8998-common device/oneplus/msm8998-common
