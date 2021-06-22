@@ -1,0 +1,18 @@
+task:
+  name: Build
+  persistent_worker: {}
+  env:
+    USE_CCACHE: 1
+    CIRRUS_WORKING_DIR: /tmp/$CIRRUS_REPO_NAME
+    GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
+  setup_env:
+    - 
+  sync_script:
+    - git config --global user.email jashvakharia@gmail.com
+    - git config --global user.name jash
+    - git config --global credential.helper cache
+    - repo init -u https://github.com/Ancient-Roms/manifest -b eleven
+    - repo sync -j32
+  build_script:
+    - ./build.sh
