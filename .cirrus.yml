@@ -15,6 +15,6 @@ task:
       cpu: 8  #8 or less cpu for dummy build, 8 cpu for the final build, 8cpu highest for free accounts. Don't try to use more than 8cpu as free user, you may get blocked by ci.
       memory: 16G # So that we can have ram when needed, 32G highest
     sync_script: # To sync source
-      - ./sync # Source sync script
+      - bash sync # Source sync script
     build_script: # Actual build script foreground
-      - ./build # Build script to run
+      - bash build # Build script to run
