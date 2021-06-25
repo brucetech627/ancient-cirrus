@@ -8,10 +8,9 @@ apt install git
 git config --global user.name "keneankit01"
 git config --global user.email "keneankit01@gmail.com"
 # Repo init command, that -device,-mips,-darwin,-notdefault part will save you more time and storage to sync, add more according to your rom and choice. Optimization is welcomed! Let's make it quit, and with depth=1 so that no unnecessary things.
-repo init -u git://github.com/NezukoOS/manifest.git -b eleven
+repo init -u https://github.com/PixelExperience/manifest -b eleven
 
 # Clone local manifest! So that no need to manually git clone repos or change hals, you can use normal git clone or rm and re clone, they will cost little more time, and you may get timeout! Let's make it quit and depth=1 too.
-#git clone https://github.com/keneankit01/android_.repo_local_manifests.git --depth 1 -b main .repo/local_manifests
 git clone https://github.com/Maitreya29/android_device_oneplus_cheeseburger.git device/oneplus/cheeseburger
 git clone https://github.com/Maitreya29/android_device_oneplus_msm8998-common device/oneplus/msm8998-common
 git clone https://github.com/Maitreya29/kernel_oneplus_msm8998.git kernel/oneplus/msm8998
