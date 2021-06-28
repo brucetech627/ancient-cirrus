@@ -2,6 +2,7 @@
 cd /tmp/rom # Depends on where source got synced
 cd packages/apps/Launcher3
 git revert ec7fb1d1a166dd10b86e55c9c30aa7c7d74f167b
+cd ../../../
 
 # Normal build steps
 . build/envsetup.sh
