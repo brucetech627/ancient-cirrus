@@ -9,11 +9,11 @@ env: # Environment variables to pass to all tasks
 
 task:
     name: aosp # Project name
-    timeout_in: 180m # Otherwise it will timeout at 60m automatically, 120m highest in free account
+    timeout_in: 260m # Otherwise it will timeout at 60m automatically, 120m highest in free account
     container:
       image: aarunalr/aosp-build # It has built-in setup environment + repo, aria2, rclone, pigz, username ci, and email ci@ci.ci [You can use your own docker image if you want, or you can use this one too!]
       cpu: 8  #8 or less cpu for dummy build, 8 cpu for the final build, 8cpu highest for free accounts. Don't try to use more than 8cpu as free user, you may get blocked by ci.
-      memory: 16G # So that we can have ram when needed, 32G highest
+      memory: 32G # So that we can have ram when needed, 32G highest
     sync_script: # To sync source
       - bash sync # Source sync script
     build_script: # Actual build script foreground
