@@ -11,7 +11,7 @@ git config --global user.email "keneankit01@gmail.com"
 repo init -u https://github.com/Wave-Project/manifest -b r
 
 # Clone local manifest! So that no need to manually git clone repos or change hals, you can use normal git clone or rm and re clone, they will cost little more time, and you may get timeout! Let's make it quit and depth=1 too.
-git clone https://github.com/cannon198u98/notfindable -b nez device/xiaomi/sweet
+git clone https://github.com/xiaomi-sm6150/android_device_xiaomi_sweet.git device/xiaomi/sweet
 
 # Sync source with -q, no need unnecessary messages, you can remove -q if want! try with -j30 first, if fails, it will try again with -j8
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j 30 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j 8
